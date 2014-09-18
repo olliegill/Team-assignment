@@ -21,6 +21,9 @@ $.ajax({
 });
 
 
-//add class "active" to first li 'bike-pic' in the ul 'bicycle-pics'
+var myElement = $('.bike-pic');
 
-$('.bike-pic').first().addClass('is-visible');
+var imageSwipe = new Hammer(myElement);
+hammertime.on('pan', function(ev) {
+    console.log(ev);
+});

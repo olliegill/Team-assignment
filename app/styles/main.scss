@@ -24,78 +24,7 @@ body {
   width: 965px;
 }
 
-// ============= HEADER =================
-
-header {
-  position: relative;
-  background: url(/images/bike-header.jpg), 50%;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  text-align: center;
-  color: $dark-color;
-  font-weight: 900;
-  overflow: hidden;
-  height: 400px;
-
-  h1 {
-    font-size: em(65);
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    text-shadow: 2px 0 2px rgba(0, 5, 0, .94);
-    margin-top: 30px;
-    }
-
-  img {
-    height: 300px;
-
-  }
-}
-
-.hook {
-  outline: solid blue 1px;
-  height: em(50);
-}
-
-.hook p {
-  font-size: em(20);
-  padding: 15px 0 0;
-  text-align: center;
-}
-
-// ===============BODY===================
-
-section {
-  background: $medium-color;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  @include outer-container;
 
 
-  li {
-    background: url(attr(id));
-    display: inline-block;
-    height: 300px;
-    width: 33%;
-    @include span-columns(4);
 
-    img {
-      height: 300px;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-}
-
-// ===============FOOTER=================
-
-footer {
-  background: $dark-color;
-  text-align: center;
-}
 

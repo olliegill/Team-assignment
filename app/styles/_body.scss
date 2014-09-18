@@ -7,12 +7,15 @@ section {
 ul {
   list-style-type: none;
   padding: 0;
+  @include outer-container;
+
 
   li {
     background: url(attr(id));
     display: inline-block;
     height: 300px;
     width: 33%;
+    @include span-columns(4);
 
     img {
       height: 300px;

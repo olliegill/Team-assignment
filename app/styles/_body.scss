@@ -1,0 +1,23 @@
+// ===============BODY===================
+
+section {
+  background: $medium-color;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    background: url(attr(id));
+    display: inline-block;
+    height: 300px;
+    width: 33%;
+
+    img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

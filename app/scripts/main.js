@@ -18,12 +18,6 @@ $.ajax({
   _.each(sortedData, function(photo) {
     renderTemplate('#templates-bicycle-pics', '.bicycle-pics', photo);
   });
-});
-
-
-var myElement = $('.bike-pic');
-
-var imageSwipe = new Hammer(myElement);
-hammertime.on('pan', function(ev) {
-    console.log(ev);
+  $('.bike-pic').hammer({}).bind('swipe', function(e){
+    alert(this);});
 });

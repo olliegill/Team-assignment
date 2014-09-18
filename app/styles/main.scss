@@ -66,3 +66,13 @@ footer {
   background: $dark-color;
   text-align: center;
 }
+
+@media (max-width: 500px) {
+  .bike-pic {
+    display: none;
+
+    &:first-child {
+      display: block;
+    }
+  }
+}

@@ -7,7 +7,6 @@ function renderTemplate(templateID, location, dataModel) {
   $(location).append(renderedTemplate);
 }
 
-//attempting to get the data with a basic ajax request (doesn't work, but throws no errors??)
 $.ajax({
   type: 'GET',
   url: flickrApi,
@@ -20,3 +19,8 @@ $.ajax({
     renderTemplate('#templates-bicycle-pics', '.bicycle-pics', photo);
   });
 });
+
+
+//add class "active" to first li 'bike-pic' in the ul 'bicycle-pics'
+
+$('.bike-pic').first().addClass('is-visible');

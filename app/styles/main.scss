@@ -1,26 +1,68 @@
  // Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
-
 // Custom Styles
+
+$light-color: #E1C4BE;
+$medium-color: #CC5456;
+$dark-color: #661827;
+
+
+
+
 body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  color: $light-color;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: pink;
-  border-radius: 6px;
-  padding: 60px;
+.content {
+  margin: 0 auto;
+  width: 965px;
+}
+
+// ============= HEADER =================
+
+header {
+  background: url(http://freehdwall.info/wall/bicycle-wallpaper-1920x1080.jpg) 50%/cover;
+  text-align: center;
+  color: $dark-color;
+  font-weight: 900;
+
   h1 {
     font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
   }
+
+  img {
+    height: 200px;
+  }
+}
+
+// ===============BODY===================
+
+section {
+  background: $medium-color;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    background: url(attr(id));
+    display: inline-block;
+    height: 300px;
+    width: 33%;
+
+    img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// ===============FOOTER=================
+
+footer {
+  background: $dark-color;
+  text-align: center;
 }

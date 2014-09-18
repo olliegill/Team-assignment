@@ -13,12 +13,13 @@ function initialize() {
 var address = "956+Lyle+St+Bedford+Va+24523";
 var geo_url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address;
 
-$.ajax({
+var geo = $.ajax({
   type: 'GET',
   url: geo_url,
   success: function(results){
     var lat = results.results[0].geometry.location.lat
     var lng = results.results[0].geometry.location.lng
-    console.log(lat, lng);
+    
+    console.log(lat);
   }
 })

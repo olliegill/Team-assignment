@@ -12,7 +12,7 @@ function renderTemplate(templateID, location, dataModel) {
 var bikeArray = [];
 
 
-//attempting to get the data with a basic ajax request
+//attempting to get the data with a basic ajax request (doesn't work, but throws no errors??)
 // $.ajax({
 //   type: 'get',
 //   url: flickrApi
@@ -30,14 +30,11 @@ var bikeArray = [];
 
 //attempting to get the data with a $.getJSON format
 $.getJSON(flickrApi, function(data) {
-  console.log(data);
   _.each(data.items, function(data) {
     var imgURL = data.media.m.slice(0, data.media.m.length -5) + "z.jpg";
-    console.log(imgURL);
     bikeArray.push({'bikePic': imgURL});
   });
   _.times(3, function(n) {
-    console.log(bikeArray[n]);
     renderTemplate('#templates-bicycle-pics', '.bicycle-pics', bikeArray[n]);
   });
 });

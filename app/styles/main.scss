@@ -22,7 +22,7 @@ body {
 // ============= HEADER =================
 
 header {
-  background: url(http://placekitten.com/g/1000/500);
+  background: url(http://freehdwall.info/wall/bicycle-wallpaper-1920x1080.jpg) 50%/cover;
   text-align: center;
   color: $dark-color;
   font-weight: 900;
@@ -49,9 +49,14 @@ ul {
   li {
     background: url(attr(id));
     display: inline-block;
-    overflow: hidden;
     height: 300px;
     width: 33%;
+
+    img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 

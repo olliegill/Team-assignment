@@ -1,4 +1,4 @@
-var flickrApi = 'https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=a59e46bc559caf69b42be8464990c102&format=json&tags=bike,bicycles,bikes,bicycle&json&per_page=3&jsoncallback=?';
+var flickrApi = 'https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=a59e46bc559caf69b42be8464990c102&format=json&tags=bicycles,bicycle&per_page=3&extras=last_update&jsoncallback=?';
 
 function renderTemplate(templateID, location, dataModel) {
   var templateString = $(templateID).text();
@@ -13,7 +13,10 @@ $.ajax({
   url: flickrApi,
   dataType: 'json'
 }).done(function(data) {
-  _.each(data.photos.photo, function(data) {
-    renderTemplate('#templates-bicycle-pics', '.bicycle-pics', data);
+  var sortedData = _.sortBy(data.photos.photo, function(photo){
+    return photo.lastupdated;
+  });
+  _.each(sortedData, function(photo) {
+    renderTemplate('#templates-bicycle-pics', '.bicycle-pics', photo);
   });
 });

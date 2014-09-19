@@ -1,5 +1,22 @@
 // ===============BODY===================
 
+.container {
+  @include outer-container;
+}
+
+main {
+  @include span-columns(12);
+}
+
+.hook p {
+  @include span-columns(12);
+  font-size: em(20);
+  padding: 11px 0 0;
+  text-align: center;
+  color: $dark-color;
+}
+
+
 section {
   @include span-columns(12);
   background: #fff;

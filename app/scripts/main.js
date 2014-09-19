@@ -1,18 +1,25 @@
 /* ==========================================================================
 Google Maps API code below:   
 ========================================================================== */
+//Sets Google Maps options & initializes Google Maps
 function initialize() {
         var mapOptions = {
-          center: { lat: 37.327571, lng: -79.5130719},
-          zoom: 18
+          center: { lat: 34.840137, lng: -82.39894199999999},
+          zoom: 16
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
+        var marker = new google.maps.Marker({
+          position: { lat: 34.840143, lng: -82.398298},
+          map: map,
+          title: 'Swamp Creek Bikes Mo-fo! Ride or Die!!!'
+        });
       }
-      google.maps.event.addDomListener(window, 'load', initialize);
+
+google.maps.event.addDomListener(window, 'load', initialize);
 
 //Google Maps Geo Location Data
-var address = "956+Lyle+St+Bedford+Va+24523";
+var address = "The Iron Yard 411 University Ridge Greenville, SC 29601";
 var geo_url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address;
 
 var geo = $.ajax({
@@ -22,7 +29,7 @@ var geo = $.ajax({
     var lat = results.results[0].geometry.location.lat
     var lng = results.results[0].geometry.location.lng
     
-    console.log(lat);
+    console.log(lat, lng);
   }
 })
 
@@ -33,9 +40,14 @@ var geo = $.ajax({
 Flicker API code below: 
 ========================================================================== */
 
-
-
 var flickrApi = 'https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=a59e46bc559caf69b42be8464990c102&format=json&tags=bicycles,bicycle&per_page=3&extras=last_update&jsoncallback=?';
+
+
+
+
+/* ==========================================================================
+Underscore Render Template code below:   
+========================================================================== */
 
 function renderTemplate(templateID, location, dataModel) {
   var templateString = $(templateID).text();

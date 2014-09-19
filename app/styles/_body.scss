@@ -65,12 +65,14 @@ section {
   margin: 15px 0 15px;
   text-align: center;
   height: 80px;
+  background: $dark-color;
+  padding: 30px;
 
   @include media($mobile-up) {
     @include span-columns(4);
-    overflow: auto;
     height: auto;
-    font-size: 10px;
+    font-size: 20px;
+    margin: 0;
   }
 }
 
@@ -79,12 +81,22 @@ section {
   @include span-columns(6);
   text-align: center;
   margin-bottom: 15px;
+
+  @include media($mobile-up) {
+    @include span-columns(4);
+    @include pad();
+  }
 }
 
 .email {
   @include span-columns(6);
   text-align: center;
   margin-bottom: 15px;
+
+  @include media($mobile-up) {
+    @include span-columns(4);
+    @include pad();
+  }
 }
 
 .description {
@@ -124,6 +136,10 @@ section {
   height: 400px;
   @include span-columns(6);
   overflow: hidden;
+
+  @include media($mobile-up) {
+    @include span-columns(4);
+  }
 }
 /*
 .map1:hover {
@@ -136,5 +152,9 @@ section {
   height: 400px;
   @include span-columns(6);
   overflow: hidden;
+
+  @include media($mobile-up) {
+    display: none;
+  }
 
 }

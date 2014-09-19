@@ -93,7 +93,7 @@ ul {
 .footer .hover-button{
   width: 35px;
   height: 35px;
-  border: solid $medium-color 6px;
+  border: solid $dark-color 13px;
   border-radius: 35px;
   margin: 0 auto;
   position: relative;
@@ -102,7 +102,8 @@ ul {
   -o-transition: all 1s ease;
   -ms-transition: all 1s ease;
   transition: all 1s ease;
-  opacity: .5;
+  //opacity: .5;
+  top: 30px;
 }
 
 .footer .hover-button:hover {
@@ -115,6 +116,7 @@ ul {
   -ms-transition: all 1s ease;
   transition: all 1s ease;
   position:relative;
+
 }
 
 .footer {

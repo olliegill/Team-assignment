@@ -12,7 +12,11 @@ $dark-color: #661827;
 @import 'header';
 @import 'body';
 @import 'footer';
+@import url(http://weloveiconfonts.com/api/?family=entypo);
 
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
 
 
 body {

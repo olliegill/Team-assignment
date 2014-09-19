@@ -1,5 +1,6 @@
-
-//Google Maps Properties
+/* ==========================================================================
+Google Maps API code below:   
+========================================================================== */
 function initialize() {
         var mapOptions = {
           center: { lat: 37.327571, lng: -79.5130719},
@@ -24,6 +25,15 @@ var geo = $.ajax({
     console.log(lat);
   }
 })
+
+
+
+
+/* ==========================================================================
+Flicker API code below: 
+========================================================================== */
+
+
 
 var flickrApi = 'https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=a59e46bc559caf69b42be8464990c102&format=json&tags=bicycles,bicycle&per_page=3&extras=last_update&jsoncallback=?';
 

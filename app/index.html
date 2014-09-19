@@ -27,6 +27,7 @@
   </head>
   <body>
 
+
     <header>
       <div class="content">
         <img class="logo" src="/images/bike.png" />
@@ -104,9 +105,17 @@ SwampRabbitCycling@example.com</span>
     </footer>
 
 <script type="text/template" id="templates-bicycle-pics">
-  <li class="bike-pic"><img src= "https://farm<%= farm %>.staticflickr.com/<%= server %>/<%= id %>_<%= secret %>.jpg"
- /></li>
+  <li class="bike-pic"><img src= "https://farm<%= farm %>.staticflickr.com/<%= server %>/<%= id %>_<%= secret %>.jpg"/></li>
 </script>
+
+
+
+    <!-- Google Map API Test Section Below -->
+    
+
+
+
+    <div id="map-canvas"></div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -114,9 +123,16 @@ SwampRabbitCycling@example.com</span>
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    
+    <!-- Google Maps API -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=">
+    </script>
+    <!-- End Google Maps API -->
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
+
 </body>
 </html>

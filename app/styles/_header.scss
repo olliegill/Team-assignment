@@ -16,7 +16,7 @@ header {
 
   @include media($mobile-up) {
     background-size: 480px;
-    height: 300px;
+    height: 250px;
     @include span-columns(4);
   }
 
@@ -33,6 +33,11 @@ header {
   img {
     height: em(500px);
     margin-top: em(50px);
+
+    @include media($mobile-up) {
+      text-align: center;
+      height: 100px;
+    }
 
   }
 }

@@ -21,9 +21,19 @@ body {
 
 .container {
   width: 100%;
+  @include outer-container;
+
+  @include media($mobile-up) {
+    width: 480px;
+    overflow: auto;
+  }
 }
 
 .content {
   margin: 0 auto;
-  width: 965px;
+  max-width: 965px;
+
+  @include media($mobile-up) {
+    @include column-span(4);
+  }
 }

@@ -4,12 +4,25 @@ main {
   @include span-columns(12);
 }
 
+.hook {
+  height: em(50);
+
+  @include media($mobile-up) {
+    height: auto;
+  }
+}
+
+
 .hook p {
-  @include span-columns(12);
   font-size: em(20);
   padding: 11px 0 0;
   text-align: center;
   color: $dark-color;
+
+  @include media($mobile-up) {
+    padding: 40px 10px;
+    font-size: em(15);
+  }
 }
 
 
@@ -18,7 +31,7 @@ section {
   background: #fff;
 }
 
-ul {
+.bicycle-pics {
   list-style-type: none;
   padding: 0;
 
@@ -45,6 +58,13 @@ ul {
   margin: 15px 0 15px;
   text-align: center;
   height: 80px;
+
+  @include media($mobile-up) {
+    @include span-columns(4);
+    overflow: auto;
+    height: auto;
+    font-size: 10px;
+  }
 }
 
 

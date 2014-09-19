@@ -32,6 +32,7 @@ body {
 .content {
   margin: 0 auto;
   max-width: 965px;
+  overflow: auto;
 
   @include media($mobile-up) {
     @include column-span(4);

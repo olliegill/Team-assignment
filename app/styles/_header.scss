@@ -18,6 +18,7 @@ header {
     background-size: 480px;
     height: 250px;
     @include span-columns(4);
+    background-attachment: scroll;
   }
 
   h1 {

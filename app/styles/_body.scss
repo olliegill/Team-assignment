@@ -126,10 +126,14 @@ section {
 
 }
 
-.maps_container {
+.map_container {
   width: 100%;
   height: 400px;
   @include outer-container;
+
+  @include media($mobile-up) {
+    height: 300px;
+  }
 }
 
 .map_canvas {
@@ -139,7 +143,10 @@ section {
   overflow: hidden;
 
   @include media($mobile-up) {
-    @include span-columns(4);
+    @include span-columns(2);
+    @include shift(1);
+    height: 200px;
+    margin-top: 35px;
   }
 }
 /*
@@ -148,7 +155,7 @@ section {
   z-index: 1;
 }
 */
-.map_sreet_view {
+.map_street_view {
   position: relative;
   height: 400px;
   @include span-columns(6);

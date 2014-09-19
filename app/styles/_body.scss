@@ -1,6 +1,7 @@
 // ===============BODY===================
 
 section {
+  @include span-columns(12);
   background: #fff;
   /*background: $medium-color;*/
 }
@@ -9,9 +10,9 @@ ul {
   list-style-type: none;
   padding: 0;
 
-  @include media($mobile-up) {
-
-  }
+  // @include media($mobile-up) {
+  //
+  // }
 
   li {
     background: url(attr(id));
@@ -19,8 +20,8 @@ ul {
     height: 300px;
     @include span-columns(4, block-collapse);
 
-    @include media($mobile-up) {
-    }
+    // @include media($mobile-up) {
+    // }
 
     img {
       height: 300px;

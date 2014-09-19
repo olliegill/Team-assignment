@@ -16,6 +16,10 @@
   -o-transition: all 1s ease;
   -ms-transition: all 1s ease;
   transition: all 1s ease;
+
+  @include media($mobile-up) {
+    display: none;
+  }
 }
 
 .footer .hover-button:hover {
@@ -44,6 +48,12 @@
   -ms-transition: all 1s ease;
   transition: all 1s ease;
   z-index: 999;
+
+  @include media($mobile-up) {
+    position: static;
+    height: 100px;
+    overflow: auto;
+  }
 }
 
 .footer:hover {
@@ -63,6 +73,12 @@
   top: 0;
   left: 0;
   background: $dark-color;
+
+  @include media($mobile-up) {
+    height: 100px;
+    width: auto;
+    position: static;
+  }
 }
 
 .footer .footer-container2 {
@@ -72,12 +88,24 @@
   width: 150px;
   height: auto;
   margin: 0 auto;
+
+  @include media($mobile-up) {
+    position: static;
+    width: auto;
+    margin: 40px auto;;
+  }
 }
 
 .footer-center {
   width: 500px;
   float: left;
   text-align: center;
+
+  @include media($mobile-up) {
+    width: 80%;
+    margin: 0 auto;
+    float: none;
+  }
 }
 
 .footer h3 {
@@ -87,4 +115,10 @@
   font-weight: 100;
   margin-top: 70px;
   margin-left: 40px;
+
+  @include media($mobile-up) {
+    font-size: 12px;
+    margin: 0;
+
+  }
 }

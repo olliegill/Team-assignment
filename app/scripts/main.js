@@ -1,5 +1,5 @@
 /* ==========================================================================
-Google Maps API code below:   
+Google Maps API code below:
 ========================================================================== */
 function initialize() {
         var mapOptions = {
@@ -19,18 +19,18 @@ var geo = $.ajax({
   type: 'GET',
   url: geo_url,
   success: function(results){
-    var lat = results.results[0].geometry.location.lat
-    var lng = results.results[0].geometry.location.lng
-    
+    var lat = results.results[0].geometry.location.lat;
+    var lng = results.results[0].geometry.location.lng;
+
     console.log(lat);
   }
-})
+});
 
 
 
 
 /* ==========================================================================
-Flicker API code below: 
+Flicker API code below:
 ========================================================================== */
 
 
@@ -57,4 +57,3 @@ $.ajax({
     renderTemplate('#templates-bicycle-pics', '.bicycle-pics', photo);
   });
 });
-

@@ -35,6 +35,10 @@ section {
   list-style-type: none;
   padding: 0;
 
+  @include media($mobile-up) {
+
+  }
+
   li {
     background: url(attr(id));
     display: inline-block;
@@ -43,6 +47,9 @@ section {
 
     @include media($mobile-up) {
       @include span-columns(4);
+      &:last-of-type {
+        width: auto;
+      }
     }
 
     img {

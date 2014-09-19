@@ -3,17 +3,39 @@ Google Maps API code below:
 ========================================================================== */
 //Sets Google Maps options & initializes Google Maps
 function initialize() {
+        //Applies map options
         var mapOptions = {
-          center: { lat: 34.840137, lng: -82.39894199999999},
-          zoom: 16
+          center: { lat: 34.840143, lng: -82.398298},
+          zoom: 16, 
+          zoomControl: true,
+          panControl: false,
+          scaleControl: false,
+          streetViewControl: true
         };
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
+
+        //Creates a instance of the Map object
+        var map = new google.maps.Map(document.getElementById('map_canvas'),
             mapOptions);
+
+        //Adds place marker to map
         var marker = new google.maps.Marker({
-          position: { lat: 34.840143, lng: -82.398298},
+          position: { lat: 34.840125, lng: -82.398303},
           map: map,
-          title: 'Swamp Creek Bikes Mo-fo! Ride or Die!!!'
+          title: 'Swamp Rabbit Cycling Mo-fo! Ride or Die!!!'
         });
+
+        var panoramaOptions = {
+          position: new google.maps.LatLng(34.840125, -82.398303),
+          pov: {
+            heading: 34,
+            pitch: 10
+          }
+        };
+
+        var panorama = new google.maps.StreetViewPanorama(document.getElementById('map_street_view'), panoramaOptions);
+          
+        map.setStreetView(panorama);
+
       }
 
 google.maps.event.addDomListener(window, 'load', initialize);

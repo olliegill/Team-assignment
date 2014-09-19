@@ -174,3 +174,33 @@ ul {
   margin-top: 70px;
   margin-left: 40px;
 }
+
+
+/* ==========================================================================
+   Google Maps CSS below:
+   ========================================================================== */
+.map_container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#map_canvas {
+  display: inline-block;
+  height: 400px;
+  width: 45%;
+  margin: 20px;
+
+  img {
+    max-width: none;
+  }
+}
+
+#map_street_view {
+  display: inline-block;
+  height: 400px;
+  width: 45%;
+  margin: 20px;
+}
+
+
+

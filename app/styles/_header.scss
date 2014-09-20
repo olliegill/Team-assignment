@@ -18,6 +18,7 @@ header {
     @include span-columns(4);
     background-attachment: scroll;
     height: 250px;
+    position: relative;
   }
 
   h1 {
@@ -28,8 +29,12 @@ header {
     margin-top: 100px;
 
     @include media($mobile-up) {
-      margin-top: 19px;
+      position: absolute;
+      bottom: -6px;
+      display: block;
       font-size: em(25);
+      margin: 0 auto;
+      width: 80%;
     }
   }
 

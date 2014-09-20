@@ -10,7 +10,7 @@ function initialize() {
           zoomControl: true,
           panControl: false,
           scaleControl: false,
-          streetViewControl: true
+          streetViewControl: false
         };
 
         //Creates a instance of the Map object

@@ -65,28 +65,29 @@ ul {
 
 }
 
-.maps {
+
+/* ==========================================================================
+   Google Maps CSS below:
+   ========================================================================== */
+.map_container {
   width: 100%;
-  height: 400px;
-  @include outer-container;
+  margin: 0 auto;
 }
 
-.map1 {
-  position: relative;
+#map_canvas {
+  display: inline-block;
   height: 400px;
-  @include span-columns(6);
-  overflow: hidden;
-}
-/*
-.map1:hover {
-  @include span-columns(8);
-  z-index: 1;
-}
-*/
-.map2 {
-  position: relative;
-  height: 400px;
-  @include span-columns(6);
-  overflow: hidden;
+  width: 45%;
+  margin: 20px;
 
+  img {
+    max-width: none;
+  }
+}
+
+#map_street_view {
+  display: inline-block;
+  height: 400px;
+  width: 45%;
+  margin: 20px;
 }

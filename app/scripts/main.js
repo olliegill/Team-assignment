@@ -1,18 +1,47 @@
 /* ==========================================================================
 Google Maps API code below:   
 ========================================================================== */
+//Sets Google Maps options & initializes Google Maps
 function initialize() {
+        //Applies map options
         var mapOptions = {
-          center: { lat: 37.327571, lng: -79.5130719},
-          zoom: 18
+          center: { lat: 34.840143, lng: -82.398298},
+          zoom: 16, 
+          zoomControl: true,
+          panControl: false,
+          scaleControl: false,
+          streetViewControl: true
         };
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
+
+        //Creates a instance of the Map object
+        var map = new google.maps.Map(document.getElementById('map_canvas'),
             mapOptions);
+
+        //Adds place marker to map
+        var marker = new google.maps.Marker({
+          position: { lat: 34.840125, lng: -82.398303},
+          map: map,
+          title: 'Swamp Rabbit Cycling Mo-fo! Ride or Die!!!'
+        });
+
+        var panoramaOptions = {
+          position: new google.maps.LatLng(34.840125, -82.398303),
+          pov: {
+            heading: 34,
+            pitch: 10
+          }
+        };
+
+        var panorama = new google.maps.StreetViewPanorama(document.getElementById('map_street_view'), panoramaOptions);
+          
+        map.setStreetView(panorama);
+
       }
-      google.maps.event.addDomListener(window, 'load', initialize);
+
+google.maps.event.addDomListener(window, 'load', initialize);
 
 //Google Maps Geo Location Data
-var address = "956+Lyle+St+Bedford+Va+24523";
+var address = "The Iron Yard 411 University Ridge Greenville, SC 29601";
 var geo_url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address;
 
 var geo = $.ajax({
@@ -22,7 +51,7 @@ var geo = $.ajax({
     var lat = results.results[0].geometry.location.lat
     var lng = results.results[0].geometry.location.lng
     
-    console.log(lat);
+    console.log(lat, lng);
   }
 })
 
@@ -33,9 +62,14 @@ var geo = $.ajax({
 Flicker API code below: 
 ========================================================================== */
 
-
-
 var flickrApi = 'https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=a59e46bc559caf69b42be8464990c102&format=json&tags=bicycles,bicycle&per_page=3&extras=last_update&jsoncallback=?';
+
+
+
+
+/* ==========================================================================
+Underscore Render Template code below:   
+========================================================================== */
 
 function renderTemplate(templateID, location, dataModel) {
   var templateString = $(templateID).text();

@@ -23,6 +23,13 @@ ul {
       @include span-columns(4);
     }
 
+    &:last-of-type {
+
+      @include media($mobile-up) {
+        width: auto;
+      }
+    }
+
     img {
       height: 300px;
       width: 100%;

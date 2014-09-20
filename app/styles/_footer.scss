@@ -52,7 +52,7 @@
   @include media($mobile-up) {
     position: static;
     height: 100px;
-    overflow: auto;
+    width: 100%;
   }
 }
 
@@ -76,7 +76,7 @@
 
   @include media($mobile-up) {
     height: 100px;
-    width: auto;
+    width: 100%;
     position: static;
   }
 }
@@ -91,8 +91,8 @@
 
   @include media($mobile-up) {
     position: static;
-    width: auto;
-    margin: 40px auto;;
+    width: 100%;
+    height: 100px;
   }
 }
 
@@ -102,9 +102,9 @@
   text-align: center;
 
   @include media($mobile-up) {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
     float: none;
+    height: 100px;
   }
 }
 
@@ -118,7 +118,8 @@
 
   @include media($mobile-up) {
     font-size: 12px;
-    margin: 0;
+    margin: auto;
+    padding: 40px;
 
   }
 }

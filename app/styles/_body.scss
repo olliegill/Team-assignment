@@ -132,7 +132,9 @@ section {
   @include outer-container;
 
   @include media($mobile-up) {
-    height: 300px;
+    height: auto;
+    padding-bottom: 40px;
+    overflow: auto;
   }
 }
 

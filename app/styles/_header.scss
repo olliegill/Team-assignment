@@ -14,20 +14,36 @@ header {
   overflow: hidden;
   height: 720px;
 
+  @include media($mobile-up) {
+    @include span-columns(4);
+    background-attachment: scroll;
+    height: 250px;
+  }
+
   h1 {
     font-size: em(65);
     color: white;
     font-family: 'Open Sans', sans-serif;
     text-shadow: 2px 0 2px rgba(0, 5, 0, .94);
     margin-top: 100px;
+
+    @include media($mobile-up) {
+      margin-top: 19px;
+      font-size: em(25);
     }
+  }
 
   img {
     height: em(500px);
     margin-top: em(50px);
 
+    @include media($mobile-up) {
+      height: em(200);
+      margin-top: 0;
+    }
   }
 }
+
 
 .hook {
   height: em(50);

@@ -20,6 +20,7 @@ ul {
     @include span-columns(4, block-collapse);
 
     @include media($mobile-up) {
+      @include span-columns(4);
     }
 
     img {

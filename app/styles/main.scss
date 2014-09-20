@@ -19,9 +19,19 @@ body {
   color: $light-color;
 }
 
+.container {
+  @include media($mobile-up) {
+    @include outer-container;
+  }
+}
+
 .content {
   margin: 0 auto;
   width: 965px;
   color: $dark-color;
-}
 
+  @include media($mobile-up) {
+    @include span-columns(4);
+    padding: 30px;
+  }
+}

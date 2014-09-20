@@ -120,6 +120,12 @@ ul {
   width: 45%;
   margin: 20px;
 
+  @include media($mobile-up) {
+    @include span-columns(2);
+    @include shift(1);
+    height: 180px;
+  }
+
   img {
     max-width: none;
   }
@@ -130,4 +136,8 @@ ul {
   height: 400px;
   width: 45%;
   margin: 20px;
+
+  @include media($mobile-up) {
+    display: none;
+  }
 }

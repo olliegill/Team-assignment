@@ -1,33 +1,3 @@
-/* ==========================================================================
-Google Maps API code below:
-========================================================================== */
-function initialize() {
-        var mapOptions = {
-          center: { lat: 37.327571, lng: -79.5130719},
-          zoom: 18
-        };
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-
-//Google Maps Geo Location Data
-var address = "956+Lyle+St+Bedford+Va+24523";
-var geo_url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address;
-
-var geo = $.ajax({
-  type: 'GET',
-  url: geo_url,
-  success: function(results){
-    var lat = results.results[0].geometry.location.lat;
-    var lng = results.results[0].geometry.location.lng;
-
-    console.log(lat);
-  }
-});
-
-
-
 
 /* ==========================================================================
 Flicker API code below:
@@ -57,4 +27,64 @@ $.ajax({
   });
   $('.bike-pic').hammer({}).bind('swipe', function(e){
     alert(this);});
+});
+
+
+
+
+/* ==========================================================================
+Google Maps API code below:
+========================================================================== */
+//Sets Google Maps options & initializes Google Maps
+function initialize() {
+        //Applies map options
+        var mapOptions = {
+          center: { lat: 34.840143, lng: -82.398298},
+          zoom: 16,
+          zoomControl: true,
+          panControl: false,
+          scaleControl: false,
+          streetViewControl: true
+        };
+
+        //Creates a instance of the Map object
+        var map = new google.maps.Map(document.getElementById('map_canvas'),
+            mapOptions);
+
+        //Adds place marker to map
+        var marker = new google.maps.Marker({
+          position: { lat: 34.840125, lng: -82.398303},
+          map: map,
+          title: 'Swamp Rabbit Cycling Mo-fo! Ride or Die!!!'
+        });
+
+        var panoramaOptions = {
+          position: new google.maps.LatLng(34.840125, -82.398303),
+          pov: {
+            heading: 34,
+            pitch: 10
+          }
+        };
+
+        var panorama = new google.maps.StreetViewPanorama(document.getElementById('map_street_view'), panoramaOptions);
+
+        map.setStreetView(panorama);
+
+      }
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+//Google Maps Geo Location Data
+var address = "The Iron Yard 411 University Ridge Greenville, SC 29601";
+var geo_url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address;
+
+var geo = $.ajax({
+  type: 'GET',
+  url: geo_url,
+  success: function(results){
+    var lat = results.results[0].geometry.location.lat;
+    var lng = results.results[0].geometry.location.lng;
+
+    console.log(lat, lng);
+  }
 });

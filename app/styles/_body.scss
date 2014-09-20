@@ -31,9 +31,14 @@ section {
   background: #fff;
 }
 
+.flickr-pics {
+  margin-right: 0;
+}
+
 .bicycle-pics {
   list-style-type: none;
   padding: 0;
+  height: 300px;
 
   @include media($mobile-up) {
     width: 1440;
@@ -43,7 +48,11 @@ section {
     background: url(attr(id));
     display: inline-block;
     height: 300px;
-    @include span-columns(4, block-collapse);
+    @include span-columns(4);
+
+    &:last-of-type {
+      margin-right: 0;
+    }
 
     @include media($mobile-up) {
       @include span-columns(4);
@@ -64,9 +73,9 @@ section {
   font-size: 20px;
   margin: 15px 0 15px;
   text-align: center;
-  height: 80px;
   background: $dark-color;
   padding: 30px;
+  @include span-columns(12);
 
   @include media($mobile-up) {
     @include span-columns(4);
@@ -126,7 +135,6 @@ section {
 }
 
 
-
 /* ==========================================================================
    Google Maps CSS below:
    ========================================================================== */
@@ -164,6 +172,7 @@ section {
   height: 400px;
   width: 45%;
   margin: 20px;
+
 
   @include media($mobile-up) {
     display: none;

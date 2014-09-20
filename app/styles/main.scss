@@ -30,6 +30,7 @@ body {
 }
 
 .content {
+  @include column-span(12);
   margin: 0 auto;
   max-width: 965px;
   overflow: auto;

@@ -1,22 +1,71 @@
 // ===============BODY===================
 
-section {
-  /*background: $medium-color;*/
+main {
+  @include span-columns(12);
 }
 
-ul {
+.hook {
+  height: em(50);
+
+  @include media($mobile-up) {
+    height: auto;
+  }
+}
+
+
+.hook p {
+  font-size: em(20);
+  padding: 11px 0 0;
+  text-align: center;
+  color: $dark-color;
+
+  @include media($mobile-up) {
+    padding: 40px 10px;
+    font-size: em(15);
+  }
+}
+
+
+section {
+  @include span-columns(12);
+  background: #fff;
+}
+
+.flickr-pics {
+  margin-right: 0;
+  height: 300px;
+  overflow: hidden;
+}
+
+.bicycle-pics {
   list-style-type: none;
   padding: 0;
+  height: 300px;
 
+  @include media($mobile-up) {
+    width: 1440;
+  }
 
   li {
     background: url(attr(id));
     display: inline-block;
     height: 300px;
-    width: 33%;
-    @include span-columns(4, block-collapse);
+    @include span-columns(4);
 
+    &:last-of-type {
+      margin-right: 0;
+    }
 
+    @include media($mobile-up) {
+      @include span-columns(4);
+    }
+
+    &:last-of-type {
+
+      @include media($mobile-up) {
+        width: auto;
+      }
+    }
 
     img {
       height: 300px;
@@ -26,11 +75,22 @@ ul {
   }
 }
 
+
 .contact-info {
-  font-size: 20px;
-  margin: 15px 0 15px;
+  @include span-columns(12);
   text-align: center;
-  height: 80px;
+
+  @include media($mobile-up) {
+    @include span-columns(4);
+    height: auto;
+    background: $dark-color;
+  }
+
+  p {
+    @include media($mobile-up) {
+      color: $light-color;
+    }
+  }
 }
 
 
@@ -38,18 +98,33 @@ ul {
   @include span-columns(6);
   text-align: center;
   margin-bottom: 15px;
+
+  @include media($mobile-up) {
+    @include span-columns(4);
+    color: $light-color;
+  }
 }
 
 .email {
   @include span-columns(6);
   text-align: center;
   margin-bottom: 15px;
+
+  @include media($mobile-up) {
+    @include span-columns(4);
+    color: $light-color;
+    font-size: 16px;
+  }
 }
 
 .description {
   width: 90%;
   overflow: none;
 
+    @include media($mobile-up) {
+      width: 100%;
+      overflow: auto;
+    }
 }
 
 .description p {
@@ -59,120 +134,9 @@ ul {
   font-size: 20px;
   border-bottom: solid $light-color 2px;
 
-}
-
-.maps {
-  width: 100%;
-  height: 400px;
-  @include outer-container;
-}
-
-.map1 {
-  position: relative;
-  height: 400px;
-  @include span-columns(6);
-  overflow: hidden;
-}
-/*
-.map1:hover {
-  @include span-columns(8);
-  z-index: 1;
-}
-*/
-.map2 {
-  position: relative;
-  height: 400px;
-  @include span-columns(6);
-  overflow: hidden;
-
-}
-
-//FOOTER
-
-
-.footer .hover-button{
-  width: 35px;
-  height: 35px;
-  border: solid $medium-color 6px;
-  border-radius: 35px;
-  margin: 0 auto;
-  position: relative;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-  opacity: .5;
-}
-
-.footer .hover-button:hover {
-  width: 35px;
-  height: 35px;
-  border: solid $dark-color 12px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-  position:relative;
-}
-
-.footer {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  width: 100%;
-  height: 3em;
-  overflow: hidden;
-  margin: 0 auto;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-  z-index: 999;
-}
-
-.footer:hover {
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-  height: 10em;
-}
-
-.footer .footer-container {
-  margin-top: 5px;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  background: $dark-color;
-}
-
-.footer .footer-container2 {
-  position: relative;
-  top: -45px;
-  right: 190px;
-  width: 150px;
-  height: auto;
-  margin: 0 auto;
-}
-
-.footer-center {
-  width: 500px;
-  float: left;
-  text-align: center;
-}
-
-.footer h3 {
-  font-family: 'Helvetica';
-  font-size: 30px;
-  font-weight: 100;
-  margin-top: 70px;
-  margin-left: 40px;
+  @include media($mobile-up) {
+    border-bottom: 0;
+  }
 }
 
 
@@ -182,6 +146,12 @@ ul {
 .map_container {
   width: 100%;
   margin: 0 auto;
+
+  @include media($mobile-up) {
+    height: auto;
+    padding-bottom: 40px;
+    overflow: auto;
+  }
 }
 
 #map_canvas {
@@ -190,8 +160,21 @@ ul {
   width: 45%;
   margin: 20px;
 
+  @include media($mobile-up) {
+    @include span-columns(2);
+    @include shift(1);
+    height: 180px;
+  }
+
   img {
     max-width: none;
+  }
+
+  @include media($mobile-up) {
+    @include span-columns(2);
+    @include shift(1);
+    height: 200px;
+    margin-top: 35px;
   }
 }
 
@@ -200,7 +183,8 @@ ul {
   height: 400px;
   width: 45%;
   margin: 20px;
+
+  @include media($mobile-up) {
+    display: none;
+  }
 }
-
-
-

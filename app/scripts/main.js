@@ -1,12 +1,13 @@
+
 /* ==========================================================================
-Google Maps API code below:   
+Google Maps API code below:
 ========================================================================== */
 //Sets Google Maps options & initializes Google Maps
 function initialize() {
         //Applies map options
         var mapOptions = {
           center: { lat: 34.840143, lng: -82.398298},
-          zoom: 16, 
+          zoom: 16,
           zoomControl: true,
           panControl: false,
           scaleControl: false,
@@ -33,7 +34,7 @@ function initialize() {
         };
 
         var panorama = new google.maps.StreetViewPanorama(document.getElementById('map_street_view'), panoramaOptions);
-          
+
         map.setStreetView(panorama);
 
       }
@@ -48,37 +49,24 @@ var geo = $.ajax({
   type: 'GET',
   url: geo_url,
   success: function(results){
-    var lat = results.results[0].geometry.location.lat
-    var lng = results.results[0].geometry.location.lng
-    
+    var lat = results.results[0].geometry.location.lat;
+    var lng = results.results[0].geometry.location.lng;
+
     console.log(lat, lng);
   }
-})
+});
 
 
 
 
 /* ==========================================================================
-Flicker API code below: 
+Flicker API code below:
 ========================================================================== */
 
 var flickrApi = 'https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=a59e46bc559caf69b42be8464990c102&format=json&tags=bicycles,bicycle&per_page=3&extras=last_update&jsoncallback=?';
 
-
-
-
-/* ==========================================================================
-Underscore Render Template code below:   
-========================================================================== */
-
-function renderTemplate(templateID, location, dataModel) {
-  var templateString = $(templateID).text();
-  var templateFunction = _.template(templateString);
-  var renderedTemplate = templateFunction(dataModel);
-  $(location).append(renderedTemplate);
-}
-
 //attempting to get the data with a basic ajax request (doesn't work, but throws no errors??)
+
 $.ajax({
   type: 'GET',
   url: flickrApi,
@@ -90,5 +78,20 @@ $.ajax({
   _.each(sortedData, function(photo) {
     renderTemplate('#templates-bicycle-pics', '.bicycle-pics', photo);
   });
+  $('.bike-pic').hammer({}).bind('swipe', function(){
+    console.log('swipe');
+  });
 });
 
+
+
+/* ==========================================================================
+Underscore Render Template code below:
+========================================================================== */
+
+function renderTemplate(templateID, location, dataModel) {
+  var templateString = $(templateID).text();
+  var templateFunction = _.template(templateString);
+  var renderedTemplate = templateFunction(dataModel);
+  $(location).append(renderedTemplate);
+}

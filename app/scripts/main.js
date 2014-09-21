@@ -1,3 +1,4 @@
+
 /* ==========================================================================
 Google Maps API code below:
 ========================================================================== */
@@ -49,6 +50,7 @@ var geo = $.ajax({
   url: geo_url,
   success: function(results){
 
+
     var lat = results.results[0].geometry.location.lat;
     var lng = results.results[0].geometry.location.lng;
 
@@ -57,6 +59,8 @@ var geo = $.ajax({
     var lat = results.results[0].geometry.location.lat
     var lng = results.results[0].geometry.location.lng
 
+    var lat = results.results[0].geometry.location.lat;
+    var lng = results.results[0].geometry.location.lng;
     console.log(lat, lng);
   }
 });
@@ -85,6 +89,7 @@ function renderTemplate(templateID, location, dataModel) {
 }
 
 //attempting to get the data with a basic ajax request (doesn't work, but throws no errors??)
+
 $.ajax({
   type: 'GET',
   url: flickrApi,
@@ -96,4 +101,21 @@ $.ajax({
   _.each(sortedData, function(photo) {
     renderTemplate('#templates-bicycle-pics', '.bicycle-pics', photo);
   });
+  $('.bike-pic').hammer({}).bind('swipe', function(){
+    console.log('swipe');
+  });
 });
+
+
+
+
+/* ==========================================================================
+Underscore Render Template code below:
+========================================================================== */
+
+function renderTemplate(templateID, location, dataModel) {
+  var templateString = $(templateID).text();
+  var templateFunction = _.template(templateString);
+  var renderedTemplate = templateFunction(dataModel);
+  $(location).append(renderedTemplate);
+}

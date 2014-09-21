@@ -1,22 +1,72 @@
 // ===============BODY===================
 
 
+main {
+  @include span-columns(12);
+}
+
+.hook {
+  height: em(50);
+
+  @include media($mobile-up) {
+    height: auto;
+  }
+}
 
 
+.hook p {
+  font-size: em(20);
+  padding: 11px 0 0;
+  text-align: center;
+  color: $dark-color;
 
-ul {
+  @include media($mobile-up) {
+    padding: 40px 10px;
+    font-size: em(15);
+  }
+}
+
+
+section {
+  @include span-columns(12);
+  background: #fff;
+}
+
+.flickr-pics {
+  margin-right: 0;
+  height: 300px;
+  overflow: hidden;
+}
+
+.bicycle-pics {
   list-style-type: none;
   padding: 0;
+  height: 300px;
 
+  @include media($mobile-up) {
+    width: 1440;
+  }
 
   li {
     background: url(attr(id));
     display: inline-block;
     height: 300px;
-    width: 33%;
-    @include span-columns(4, block-collapse);
+    @include span-columns(4);
 
+    &:last-of-type {
+      margin-right: 0;
+    }
 
+    @include media($mobile-up) {
+      @include span-columns(4);
+    }
+
+    &:last-of-type {
+
+      @include media($mobile-up) {
+        width: auto;
+      }
+    }
 
     img {
       height: 300px;
@@ -26,11 +76,22 @@ ul {
   }
 }
 
+
 .contact-info {
-  font-size: 20px;
-  margin: 15px 0 15px;
+  @include span-columns(12);
   text-align: center;
-  height: 80px;
+
+  @include media($mobile-up) {
+    @include span-columns(4);
+    height: auto;
+    background: $dark-color;
+  }
+
+  p {
+    @include media($mobile-up) {
+      color: $light-color;
+    }
+  }
 }
 
 
@@ -38,6 +99,11 @@ ul {
   @include span-columns(6);
   text-align: center;
   margin-bottom: 15px;
+
+  @include media($mobile-up) {
+    @include span-columns(4);
+    color: $light-color;
+  }
 }
 
 .email {
@@ -45,12 +111,22 @@ ul {
   text-align: center;
   margin-bottom: 15px;
 
+
+  @include media($mobile-up) {
+    @include span-columns(4);
+    color: $light-color;
+    font-size: 16px;
+  }
 }
 
 .description {
   width: 90%;
   overflow: none;
 
+    @include media($mobile-up) {
+      width: 100%;
+      overflow: auto;
+    }
 }
 
 
@@ -61,6 +137,7 @@ ul {
   text-align: center;
   font-size: 20px;
   border-bottom: solid $dark-color 2px;
+
 
 }
 /*
@@ -184,6 +261,9 @@ ul {
   font-weight: 100;
   margin-top: 70px;
   margin-left: 40px;
+  @include media($mobile-up) {
+    border-bottom: 0;
+  }
 }
 
 
@@ -202,6 +282,12 @@ ul {
 .map_container {
   width: 100%;
   margin: 0 auto;
+
+  @include media($mobile-up) {
+    height: auto;
+    padding-bottom: 40px;
+    overflow: auto;
+  }
 }
 
 #map_canvas {
@@ -211,8 +297,21 @@ ul {
   margin: 20px;
   @include span-columns(5);
 
+  @include media($mobile-up) {
+    @include span-columns(2);
+    @include shift(1);
+    height: 180px;
+  }
+
   img {
     max-width: none;
+  }
+
+  @include media($mobile-up) {
+    @include span-columns(2);
+    @include shift(1);
+    height: 200px;
+    margin-top: 35px;
   }
 }
 
@@ -223,4 +322,8 @@ ul {
   margin: 20px;
   @include span-columns(5);
   @include shift(1);
+
+  @include media($mobile-up) {
+    display: none;
+  }
 }

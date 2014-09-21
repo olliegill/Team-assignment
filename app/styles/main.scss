@@ -30,8 +30,22 @@ body {
   color: $light-color;
 }
 
+.container {
+  @include media($mobile-up) {
+    @include outer-container;
+  }
+}
+
 .content {
+  @include column-span(12);
   margin: 0 auto;
   width: 965px;
   color: $dark-color;
+
+
+  @include media($mobile-up) {
+    @include span-columns(4);
+    padding: 30px;
+  }
+
 }

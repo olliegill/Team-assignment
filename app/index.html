@@ -81,6 +81,13 @@ SwampRabbitCycling@example.com</span>
         </div><!-- .content -->
     </div><!-- .map_container -->
 
+
+<div class="tweets_container">
+  <span class="tweet_title">Recent Tweets:</span>
+  <div id="tweets_container"></div><!-- #tweets_container -->
+</div><!-- .tweets_container -->
+
+
     </main>
 
     <footer>
@@ -107,6 +114,8 @@ SwampRabbitCycling@example.com</span>
        </div>
        </div>
 
+
+
     </footer>
 <script type="text/template" id="templates-bicycle-pics">
   <li class="bike-pic"><img src= "https://farm<%= farm %>.staticflickr.com/<%= server %>/<%= id %>_<%= secret %>.jpg"/></li>
@@ -130,6 +139,10 @@ SwampRabbitCycling@example.com</span>
     <script src="../bower_components/jquery-hammerjs/jquery.hammer.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+
+    <!-- Twitter fetcher -->
+    <script src="scripts/twitterFetcher_min.js"></script>
+    <!-- End Twitter fetcher -->
 
     <!-- Google Maps API -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=">

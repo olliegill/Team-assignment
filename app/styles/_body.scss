@@ -249,6 +249,31 @@ section {
 
 
 /* ==========================================================================
+   Twitter Feed CSS below:
+   ========================================================================== */
+.tweets_container {
+  margin: 20px auto;
+  position: relative;
+  width: 70%;
+  outline: 1px dashed red;
+
+  .tweet_title {
+    color: #59ADEB;
+    font-size: 1.7em;
+    font-weight: bold;
+  }
+
+  .interact {
+    display: none;
+    position: relative;
+    left: 60%;
+  }
+}
+
+
+
+
+/* ==========================================================================
    Google Maps CSS below:
    ========================================================================== */
 .map_container {

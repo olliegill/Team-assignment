@@ -31,6 +31,10 @@ section {
   background: #fff;
 }
 
+//====================================================================
+//               FLICKR API STYLES BELOW
+//====================================================================
+
 .flickr-pics {
   margin-right: 0;
   height: 300px;
@@ -43,7 +47,7 @@ section {
   height: 300px;
 
   @include media($mobile-up) {
-    width: 1440;
+    position: relative;
   }
 
   li {
@@ -57,14 +61,10 @@ section {
     }
 
     @include media($mobile-up) {
-      @include span-columns(4);
-    }
-
-    &:last-of-type {
-
-      @include media($mobile-up) {
-        width: auto;
-      }
+      // @include span-columns(4);
+      position: absolute;
+      width: 480px;
+      transition-duration: .5s;
     }
 
     img {
@@ -75,6 +75,9 @@ section {
   }
 }
 
+//====================================================================
+//           end flickr api styles
+//====================================================================
 
 .contact-info {
   @include span-columns(12);

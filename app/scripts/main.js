@@ -77,11 +77,37 @@ $.ajax({
   _.each(sortedData, function(photo) {
     renderTemplate('#templates-bicycle-pics', '.bicycle-pics', photo);
   });
-  $('.bike-pic').hammer({}).bind('swipe', function(){
-    console.log('swipe');
-  });
+  flickrSwipe();
 });
 
+
+function flickrSwipe(){
+// add left property to all bike-pic li's
+  $('.bike-pic').css('left', function(n){
+    if (n===0)
+      return 0;
+    else
+      return "480px";
+  });
+
+//move this image to the left when swiping left and bring the next element to left 0
+//do nothing if on the right-most (last) element
+  $('.bike-pic').hammer({}).bind('swipeleft', function(){
+    if(!$(this).is('li:last-of-type')){
+      $(this).css('left', '-480px');
+      $(this).next().css('left', 0);
+    }
+  });
+
+//move this image to the right when swiping right and bring the previous element to left 0
+//do nothing if on the left-most (first) element
+  $('.bike-pic').hammer({}).bind('swiperight', function(){
+    if(!$(this).is('li:first-of-type')){
+      $(this).css('left', '480px');
+      $(this).prev().css('left', 0);
+    }
+  });
+}
 
 
 /* ==========================================================================

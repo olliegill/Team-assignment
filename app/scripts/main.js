@@ -75,8 +75,7 @@ $.ajax({
   var sortedData = _.sortBy(data.photos.photo, function(photo){
     return photo.lastupdated;
   });
-  _.each(sortedData, function(photo, n) {
-    // photo.left = 480*n;
+  _.each(sortedData, function(photo) {
     renderTemplate('#templates-bicycle-pics', '.bicycle-pics', photo);
   });
   flickrSwipe();
@@ -93,7 +92,7 @@ function flickrSwipe(){
   });
 
 //move this image to the left when swiping left and bring the next element to left 0
-//do nothing if on the left-most (last) element
+//do nothing if on the right-most (last) element
   $('.bike-pic').hammer({}).bind('swipeleft', function(){
     if(!$(this).is('li:last-of-type')){
       $(this).css('left', '-480px');
@@ -102,7 +101,7 @@ function flickrSwipe(){
   });
 
 //move this image to the right when swiping right and bring the previous element to left 0
-//do nothing if on the right-most (first) element
+//do nothing if on the left-most (first) element
   $('.bike-pic').hammer({}).bind('swiperight', function(){
     if(!$(this).is('li:first-of-type')){
       $(this).css('left', '480px');

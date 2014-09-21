@@ -78,11 +78,22 @@ $.ajax({
   _.each(sortedData, function(photo) {
     renderTemplate('#templates-bicycle-pics', '.bicycle-pics', photo);
   });
-  $('.bike-pic').hammer({}).bind('swipe', function(){
-    console.log('swipe');
-  });
+  flickrSwipe();
 });
 
+
+function flickrSwipe(){
+  $('.bike-pic').hammer({}).bind('swipeleft', function(){
+    if(!$(this).is('li:last-of-type')){
+      console.log('swipe left');
+    }
+  });
+  $('.bike-pic').hammer({}).bind('swiperight', function(){
+    if(!$(this).is('li:first-of-type')){
+      console.log('swipe right');
+    }
+  });
+}
 
 
 /* ==========================================================================

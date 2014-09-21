@@ -112,7 +112,7 @@
 .footer h3 {
   color: $light-color;
   font-family: 'Helvetica';
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 100;
   margin-top: 70px;
   margin-left: 40px;
@@ -121,4 +121,25 @@
     font-size: 14px;
     margin: 40px 0;
   }
+}
+
+
+.social {
+  margin-left: 40px;
+}
+
+.social a {
+  color: $light-color;
+  height: 40px;
+  width: 40px;
+}
+
+.social li {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.entypo-twitter {
+  margin: 0 20px;
 }

@@ -78,6 +78,7 @@ section {
 
 
 .contact-info {
+  margin-top: 10px;
   @include span-columns(12);
   text-align: center;
 
@@ -140,46 +141,15 @@ section {
 
 
 }
-/*
-.maps {
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-  @include outer-container;
-  position: absolute;
-}
 
-.map1 {
-  position: relative;
-  height: 400px;
-  @include span-columns(4);
-  overflow: hidden;
-  z-index: 1;
-}
-
-.map1:hover {
-  @include span-columns(8);
-  transition-duration: 1s;
-  z-index: 2;
-}
-
-.map2 {
-  position: relative;
-  height: 400px;
-  @include span-columns(4);
-  @include shift(4);
-  overflow: hidden;
-  z-index: 2;
-}
-*/
 
 //FOOTER
 
 
-.footer .hover-button{
+/* .footer .hover-button{
   width: 35px;
   height: 35px;
-  border: solid $dark-color 13px;
+  border: solid \$dark-color 13px;
   border-radius: 35px;
   margin: 0 auto;
   position: relative;
@@ -195,7 +165,7 @@ section {
 .footer .hover-button:hover {
   width: 35px;
   height: 35px;
-  border: solid $dark-color 12px;
+  border: solid \$dark-color 12px;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -237,7 +207,7 @@ section {
   position: relative;
   top: 0;
   left: 0;
-  background: $dark-color;
+  background: \$dark-color;
 }
 
 .footer .footer-container2 {
@@ -261,10 +231,10 @@ section {
   font-weight: 100;
   margin-top: 70px;
   margin-left: 40px;
-  @include media($mobile-up) {
+  @include media(\$mobile-up) {
     border-bottom: 0;
   }
-}
+} */
 
 
 .social {
@@ -280,8 +250,9 @@ section {
    Google Maps CSS below:
    ========================================================================== */
 .map_container {
-  width: 100%;
+  width: 97%;
   margin: 0 auto;
+  @include outer-container;
 
   @include media($mobile-up) {
     height: auto;

@@ -152,7 +152,7 @@ var config4 = {
   "id": '513556658308390912',
   "domId": 'tweets_container',
   "maxTweets": 2,
-  "enableLinks": true,
+  "enableLinks": false,
   "showUser": false,
   "showTime": false,
   "dateFunction": dateFormatter,

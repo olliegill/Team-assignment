@@ -86,7 +86,10 @@ $.ajax({
 function flickrSwipe(){
 // add left property to all bike-pic li's
   $('.bike-pic').css('left', function(n){
-    return n*480 + "px";
+    if (n===0)
+      return 0;
+    else
+      return "480px";
   });
 
 //move this image to the left when swiping left and bring the next element to left 0

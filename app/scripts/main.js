@@ -98,7 +98,6 @@ function flickrSwipe(){
     if(!$(this).is('li:last-of-type')){
       $(this).css('left', '-480px');
       $(this).next().css('left', 0);
-      console.log('swipe left');
     }
   });
 
@@ -108,7 +107,6 @@ function flickrSwipe(){
     if(!$(this).is('li:first-of-type')){
       $(this).css('left', '480px');
       $(this).prev().css('left', 0);
-      console.log('swipe right');
     }
   });
 }

@@ -106,6 +106,10 @@ section {
     @include span-columns(4);
     color: $light-color;
   }
+
+  a {
+    color: $light-color;
+  }
 }
 
 .email {

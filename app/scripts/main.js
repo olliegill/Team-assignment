@@ -75,7 +75,8 @@ $.ajax({
   var sortedData = _.sortBy(data.photos.photo, function(photo){
     return photo.lastupdated;
   });
-  _.each(sortedData, function(photo) {
+  _.each(sortedData, function(photo, n) {
+    // photo.left = 480*n;
     renderTemplate('#templates-bicycle-pics', '.bicycle-pics', photo);
   });
   flickrSwipe();
@@ -83,6 +84,11 @@ $.ajax({
 
 
 function flickrSwipe(){
+// add left property to all bike-pic li's
+  $('.bike-pic').css('left', function(n){
+    return n*480 + "px";
+  });
+
   $('.bike-pic').hammer({}).bind('swipeleft', function(){
     if(!$(this).is('li:last-of-type')){
       console.log('swipe left');

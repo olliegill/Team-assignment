@@ -21,8 +21,19 @@ function initialize() {
         var marker = new google.maps.Marker({
           position: { lat: 34.840125, lng: -82.398303},
           map: map,
-          title: 'Swamp Rabbit Cycling Mo-fo! Ride or Die!!!'
+          title: 'Swamp Rabbit Cycling Mo-fo! Ride or Die!!!',
+          animation: google.maps.Animation.DROP
         });
+
+        google.maps.event.addListener(marker, 'click', toggleBounce);
+        function toggleBounce() {
+
+          if (marker.getAnimation() != null) {
+            marker.setAnimation(null);
+          } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
+        }
 
         var panoramaOptions = {
           position: new google.maps.LatLng(34.840125, -82.398303),

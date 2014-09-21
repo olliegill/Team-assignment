@@ -1,4 +1,3 @@
-
 /* ==========================================================================
 Google Maps API code below:
 ========================================================================== */
@@ -95,3 +94,71 @@ function renderTemplate(templateID, location, dataModel) {
   var renderedTemplate = templateFunction(dataModel);
   $(location).append(renderedTemplate);
 }
+
+
+
+/* ==========================================================================
+Twitter API workaround code below:
+========================================================================== */
+ /*********************************************************************
+ *  #### Twitter Post Fetcher v12.0 ####
+ *  Coded by Jason Mayes 2013. A present to all the developers out there.
+ *  www.jasonmayes.com
+ *  Please keep this disclaimer with my code if you use it. Thanks. :-)
+ *  Got feedback or questions, ask here: 
+ *  http://www.jasonmayes.com/projects/twitterApi/
+ *  Github: https://github.com/jasonmayes/Twitter-Post-Fetcher
+ *  Updates will be posted to this site.
+ *********************************************************************/
+
+var config4 = {
+  "id": '513556658308390912',
+  "domId": 'tweets_container',
+  "maxTweets": 2,
+  "enableLinks": true,
+  "showUser": false,
+  "showTime": false,
+  "dateFunction": dateFormatter,
+  "showRetweet": false
+};
+function dateFormatter(date) {
+  return date.toTimeString();
+}
+
+twitterFetcher.fetch(config4);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

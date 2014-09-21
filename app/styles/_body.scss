@@ -110,6 +110,11 @@ section {
   a {
     color: $light-color;
   }
+
+  span {
+    position: relative;
+    top: 5px;
+  }
 }
 
 .email {
@@ -125,6 +130,11 @@ section {
 
   a {
     color: $light-color;
+  }
+
+  span {
+    position: relative;
+    top: 5px;
   }
 }
 

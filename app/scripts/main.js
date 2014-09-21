@@ -89,13 +89,22 @@ function flickrSwipe(){
     return n*480 + "px";
   });
 
+//move this image to the left when swiping left and bring the next element to left 0
+//do nothing if on the left-most (last) element
   $('.bike-pic').hammer({}).bind('swipeleft', function(){
     if(!$(this).is('li:last-of-type')){
+      $(this).css('left', '-480px');
+      $(this).next().css('left', 0);
       console.log('swipe left');
     }
   });
+
+//move this image to the right when swiping right and bring the previous element to left 0
+//do nothing if on the right-most (first) element
   $('.bike-pic').hammer({}).bind('swiperight', function(){
     if(!$(this).is('li:first-of-type')){
+      $(this).css('left', '480px');
+      $(this).prev().css('left', 0);
       console.log('swipe right');
     }
   });

@@ -1,9 +1,124 @@
 
 // ===============FOOTER=================
-/*
-footer {
-  background: $dark-color;
-  text-align: center;
-}
-*/
+//FOOTER
 
+
+.footer .hover-button{
+  width: 35px;
+  height: 35px;
+  border: solid $dark-color 12px;
+  border-radius: 35px;
+  margin: 0 auto;
+  position: relative;
+  top: 28px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  opacity: .5;
+
+  @include media($mobile-up) {
+    display: none;
+  }
+}
+
+.footer .hover-button:hover {
+  width: 35px;
+  height: 35px;
+  border: solid $dark-color 12px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  position:relative;
+}
+
+.footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 3em;
+  overflow: hidden;
+  margin: 0 auto;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 999;
+
+  @include media($mobile-up) {
+    position: static;
+    height: 100px;
+    width: 100%;
+  }
+}
+
+.footer:hover {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  height: 10em;
+}
+
+.footer .footer-container {
+  margin-top: 5px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: $dark-color;
+
+  @include media($mobile-up) {
+    position: static;
+    height: 100px;
+    width: 100%;
+  }
+}
+
+.footer .footer-container2 {
+  position: relative;
+  top: -45px;
+  right: 190px;
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+
+  @include media($mobile-up) {
+    position: static;
+    height: 100px;
+    width: 100%;
+  }
+}
+
+.footer-center {
+  width: 500px;
+  float: left;
+  text-align: center;
+
+  @include media($mobile-up) {
+    position: static;
+    height: 100px;
+    width: 100%;
+  }
+}
+
+.footer h3 {
+  color: $light-color;
+  font-family: 'Helvetica';
+  font-size: 30px;
+  font-weight: 100;
+  margin-top: 70px;
+  margin-left: 40px;
+
+  @include media($mobile-up) {
+    font-size: 14px;
+    margin: 40px 0;
+  }
+}

@@ -36,10 +36,10 @@ function initialize() {
         }
 
         var panoramaOptions = {
-          position: new google.maps.LatLng(34.840125, -82.398303),
+          position: new google.maps.LatLng(34.8401191, -82.39910289999999),
           pov: {
-            heading: 34,
-            pitch: 10
+            heading: 30,
+            pitch: 0
           }
         };
 

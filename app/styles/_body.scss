@@ -209,9 +209,7 @@ ul {
   height: 400px;
   width: 45%;
   margin: 20px;
-  /*@include span-columns(5);*/
-    @include media(max-width 480px, 5) {
-    @include span-columns(12);
+  @include span-columns(5);
 
   img {
     max-width: none;
@@ -225,5 +223,4 @@ ul {
   margin: 20px;
   @include span-columns(5);
   @include shift(1);
-}
 }

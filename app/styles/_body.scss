@@ -229,6 +229,10 @@ section {
   width: 45%;
   margin: 20px;
 
+  img {
+    max-width: none;
+  }
+
   @include media($mobile-up) {
     display: none;
   }

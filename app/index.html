@@ -51,19 +51,26 @@
 
       <section class="description">
         <div class="content">
-          <p>From mountain bikes to kids training wheels, we've got what you need. Come join us for our Saturday community events or just stop by to say hello!</p>
+          <p>From mountain bikes to kids training wheels, we've got what you need. <br/>Come join us for our Saturday community events or just stop by to say hello!</p>
         </div>
       </section>
 
       <div class="contact-info">
         <div class="content">
           <p>Visit, call or email us today and get the most out of your bike riding experience!</p>
-          <div class="phone"><span class="mega-octicon octicon-device-mobile"></span>
-202.555.0127</div>
-          <div class="email"><span class="mega-octicon octicon-mail"></span>
-SwampRabbitCycling@example.com</div>
+
+          <span class="phone"><span class="entypo-phone"></span>
+202.555.0127</span>
+          <span class="email"><span class="entypo-mail"></span>
+SwampRabbitCycling@example.com</span>
+
         </div>
       </div>
+
+
+
+
+
 
      <!-- Google Map API Test Section Below -->
 
@@ -74,27 +81,46 @@ SwampRabbitCycling@example.com</div>
         </div><!-- .content -->
     </div><!-- .map_container -->
 
-<div class="tweets_container">
+<div class="big-tweets">
+ <div class="tweets_container">
   <span class="tweet_title">Recent Tweets:</span>
   <div id="tweets_container"></div><!-- #tweets_container -->
-</div><!-- .tweets_container -->
+ </div><!-- .tweets_container -->
+</div>
 
     </main>
 
     <footer>
       <div class="footer">
+       <div class="hover-button"></div>
+       <div class="footer-container">
+       <div class="footer-container2">
+       <div class="footer-center">
+	       <h3>&copy; 2014 Swamp Rabbit Cycling, LLC.</h3>
 
-        <div class="hover-button"></div>
-        <div class="footer-container">
-          <div class="footer-container2">
-            <div class="footer-center">
-        	   <h3>&copy; 2014 Swamp Rabbit Cycling, LLC.</h3>
-            </div>
-          </div>
-        </div>
-      </div>
+         <ul class="social">
+           <a href="https://www.facebook.com/">
+             <li class="entypo-facebook-squared">
+           </li></a>
+          <a href ="https://twitter.com/">
+            <li class="entypo-twitter">
+           </li></a>
+           <a href="https://plus.google.com/">
+             <li class="entypo-gplus">
+           </li></a>
+         </ul>
+       </div>
+       </div>
+       </div>
+       </div>
+
+
+
     </footer>
-  </div><!-- container -->
+<script type="text/template" id="templates-bicycle-pics">
+  <li class="bike-pic"><img src= "https://farm<%= farm %>.staticflickr.com/<%= server %>/<%= id %>_<%= secret %>.jpg"/></li>
+</script>
+
 
 
     <!-- FLICKR API template -->

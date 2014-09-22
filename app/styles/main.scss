@@ -12,8 +12,19 @@ $dark-color: #661827;
 @import 'header';
 @import 'body';
 @import 'footer';
+// Font Icons
+//@import url(http://weloveiconfonts.com/api/?family=entypo);
 
 
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+
+// Main CSS
 
 body {
   color: $light-color;
@@ -31,8 +42,10 @@ body {
   width: 965px;
   color: $dark-color;
 
+
   @include media($mobile-up) {
     @include span-columns(4);
     padding: 30px;
   }
+
 }

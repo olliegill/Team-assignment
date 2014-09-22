@@ -135,7 +135,7 @@ section {
 
 .description p {
   margin: 10px auto 0 auto;
-  padding-bottom: 10px;
+  padding: 10px 0 10px 0;
   width: 90%;
   text-align: center;
   font-size: 20px;
@@ -143,101 +143,6 @@ section {
 
 
 }
-
-
-//FOOTER
-
-
-/* .footer .hover-button{
-  width: 35px;
-  height: 35px;
-  border: solid \$dark-color 13px;
-  border-radius: 35px;
-  margin: 0 auto;
-  position: relative;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-  top: 30px;
-  opacity: .7;
-}
-
-.footer .hover-button:hover {
-  width: 35px;
-  height: 35px;
-  border: solid \$dark-color 12px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-  position:relative;
-
-}
-
-.footer {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  width: 100%;
-  height: 3em;
-  overflow: hidden;
-  margin: 0 auto;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-  z-index: 999;
-}
-
- .footer:hover {
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-  height: 10em;
-}
-
-.footer .footer-container {
-  margin-top: 5px;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  background: \$dark-color;
-}
-
-.footer .footer-container2 {
-  position: relative;
-  top: -45px;
-  right: 190px;
-  width: 150px;
-  height: auto;
-  margin: 0 auto;
-}
-
-.footer-center {
-  width: 500px;
-  float: left;
-  text-align: center;
-}
-
-.footer h3 {
-  font-family: 'Helvetica';
-  font-size: 20px;
-  font-weight: 100;
-  margin-top: 70px;
-  margin-left: 40px;
-  @include media(\$mobile-up) {
-    border-bottom: 0;
-  }
-} */
-
 
 .social {
   margin-left: 40px;
@@ -251,14 +156,20 @@ section {
 /* ==========================================================================
    Twitter Feed CSS below:
    ========================================================================== */
+.big-tweets {
+  width: 90%;
+  margin: 0 auto;
+  border-top: solid $dark-color 2px;
+}
+
 .tweets_container {
   margin: 20px auto;
   position: relative;
   width: 70%;
-  outline: 1px dashed red;
+  color: $medium-color;
 
   .tweet_title {
-    color: #59ADEB;
+    color: $dark-color;
     font-size: 1.7em;
     font-weight: bold;
   }

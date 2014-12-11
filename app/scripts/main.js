@@ -55,8 +55,8 @@ var geo = $.ajax({
 
     console.log(lat);
 
-    var lat = results.results[0].geometry.location.lat;
-    var lng = results.results[0].geometry.location.lng;
+    var lat = results.results[0].geometry.location.lat
+    var lng = results.results[0].geometry.location.lng
 
     var lat = results.results[0].geometry.location.lat;
     var lng = results.results[0].geometry.location.lng;
@@ -155,7 +155,7 @@ Twitter API workaround code below:
  *  Coded by Jason Mayes 2013. A present to all the developers out there.
  *  www.jasonmayes.com
  *  Please keep this disclaimer with my code if you use it. Thanks. :-)
- *  Got feedback or questions, ask here:
+ *  Got feedback or questions, ask here: 
  *  http://www.jasonmayes.com/projects/twitterApi/
  *  Github: https://github.com/jasonmayes/Twitter-Post-Fetcher
  *  Updates will be posted to this site.
@@ -176,3 +176,39 @@ function dateFormatter(date) {
 }
 
 twitterFetcher.fetch(config4);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
